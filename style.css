@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0      ;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    color: green;
+}
+
+#root {
+    width: 80%;
+    margin: 20px auto 10px;
+    background: lightgray;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.line {
+    width: 48%;
+    box-sizing: border-box;
+    border: 5px outset red;
+    margin-top: 20px;
+}
+
+.healthMonster,
+.healthPlayer {
+    width: 90%;
+    margin: 0 auto 20px;
+    height: 50px;
+    background: red;
+}
+
+.progressPlayer,
+.progressMonster {
+    height: 50px;
+    background: greenyellow;
+}
+
+.progressPlayer {
+    position: relative;
+}
+
+.overheal {
+    height: 50px;
+    top: 0;
+    left: 0;
+    background: blue;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
+    margin: 20px;
+    background: green;
+    color: white;
+}
+
+.actionButtons {
+    display: flex;
+    justify-content: center;
+}
+
+.restart {
+    margin: 20px 40px;
+}

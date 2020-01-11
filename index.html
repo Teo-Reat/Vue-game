@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="root">
+    <div v-show="showBattle">
+        <div class="wrapper">
+            <div class="you line">
+                <h2>You have {{ healthPlayer }} hit points.</h2>
+                <div class="healthPlayer">
+                    <div class="progressPlayer" :style="{width: healthPlayer + '%'}">
+                        <div class="overheal" :style="{width: overHeal + '%'}">{{ overHeal }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="monster line">
+                <h2>Monster have {{ healthMonster }} hit points.</h2>
+                <div class="healthMonster">
+                    <div class="progressMonster" :style="{width: healthMonster + '%'}"></div>
+                </div>
+            </div>
+        </div>
+        <div class="actionButtons">
+            <button @click="attack">Attack</button>
+            <button @click="crazyHit">Crazy Hit</button>
+            <button @click="heal">Heal</button>
+            <button @click="giveUp">Give Up</button>
+        </div>
+    </div>
+    <button @click="showBattle = !showBattle, restart()" v-show="!showBattle" class="restart">Restart</button>
+    <hr>
+    <ol>
+        <li v-for="log in logs">{{ log }}</li>
+    </ol>
+</div>
+<script src="vue.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
