@@ -34,7 +34,7 @@ new Vue({
                 this.logs.push('You died');
                 this.showBattle = false;
             } else if(this.healthMonster <= 0) {
-                this.logs.push('You win! Congratulations!');
+                this.logs.push('You won! Congratulations!');
                 this.showBattle = false;
             } else if(this.logs.length >= 20) {
                 this.logs.push('You died of old age.');
